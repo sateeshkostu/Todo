@@ -3,6 +3,8 @@ const mongoose=require('mongoose')
 const bodyparser= require('body-parser')
 const signuproutes = require('./routes/signuproutes')
 const todosrouter = require('./routes/todorouter')
+const Admin = require('./routes/Admin')
+const Useradd = require('./routes/Useradd')
 
  var cors = require('cors');
 const app = express();
@@ -22,6 +24,8 @@ app.use(bodyparser.urlencoded({extended: false})); //middleware of parsing bodie
 app.use(bodyparser.json());
 app.use('/signup', signuproutes);
 app.use('/todos', todosrouter);
+app.use('/signupAdmin',Admin)
+app.use('/adduser',Useradd)
 
 
 module.exports = app;
