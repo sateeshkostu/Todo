@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": " server.js",
-    "server": "node server.js"
+    "server": " server.js"
   },
   "author": "",
   "license": "ISC",
