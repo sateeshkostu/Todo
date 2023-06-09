@@ -67,4 +67,18 @@ router.get('/getuser', async (req, res) => {  //// async makes a function return
     }
 })
 
+router.delete('/delete/:id', (req, res) => {
+    User.findByIdAndDelete(req.params.id)  //params means parameter value
+        .then(() => res.json('user deleted'))
+        .catch(err => res.status(400).json(`Error: ${err}`));
+
+})
+
+router.put('/update/:id', (req, res) => {
+    User.findByIdAndUpdate(req.params.id, req.body)  //params means parameter value
+        .then(() => res.json('user updated'))
+        .catch(err => res.status(400).json(`Error: ${err}`));
+
+})
+
 module.exports = router;

@@ -5,7 +5,7 @@ const TodoSchema =  mongoose.Schema({
     name: { type: String, required: true },
     Duration : { type : String, required: true },
     Startdate : { type : String, required: true },
-    Enddate : { type : String, required: true }
+    Enddate : { type : String, required: true },
     
   });
 
